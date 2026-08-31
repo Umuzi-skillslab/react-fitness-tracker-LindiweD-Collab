@@ -1,1 +1,2 @@
-Add screenshots here: home page, exercises page with filters, exercise detail with video, workout planner, workout history, progress tracking, mobile view, and a test-coverage report screenshot (see README.md's Test coverage report section for the current numbers to capture).
+<img width="1905" height="905" alt="image" src="https://github.com/user-attachments/assets/c617e236-be54-48e9-91b7-cda22c9aa815" />
+
