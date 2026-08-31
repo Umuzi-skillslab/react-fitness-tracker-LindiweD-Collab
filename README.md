@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Pulse — Fitness Tracker & Workout Planner
 
 A responsive React application for browsing exercises, planning a weekly
