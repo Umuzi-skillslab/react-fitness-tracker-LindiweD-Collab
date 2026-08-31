@@ -1,0 +1,30 @@
+.footer {
+  background: var(--color-ink);
+  color: var(--color-text-on-dark);
+  padding: var(--space-6) 0;
+  margin-top: var(--space-8);
+  text-align: center;
+}
+.footer p {
+  color: rgba(247, 245, 240, 0.65);
+  margin: 0;
+  font-size: 0.9rem;
+}
+.emptyState {
+  text-align: center;
+  padding: var(--space-7) var(--space-4);
+  color: var(--color-text-muted);
+}
+.emptyState .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-3);
+}
+.errorState {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background: rgba(214, 59, 59, 0.08);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  color: var(--color-danger);
+}
