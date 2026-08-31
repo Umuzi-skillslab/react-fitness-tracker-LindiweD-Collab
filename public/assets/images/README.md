@@ -1,1 +1,1 @@
-Place exercise photos here, named to match the `image` path in src/data/exercisesData.js (e.g. pushups.jpg). Not included in this submission — the app renders correctly without them; the <img> spots simply show broken-image placeholders until real files are added.
+ `image` path in src/data/exercisesData.js (e.g. pushups.jpg). 
