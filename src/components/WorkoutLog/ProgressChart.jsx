@@ -3,11 +3,6 @@ import Card from '../UI/Card';
 import { DAYS_OF_WEEK, calculateStreak, calculateTotalCalories, capitalize } from '../../utils/helpers';
 import styles from './WorkoutLog.module.css';
 
-/**
- * ProgressChart — summarizes total workouts, streak, and calories, plus a
- * simple bar chart of exercises planned per day. Pure display component
- * driven entirely by props (data transformation happens before it's called).
- */
 const ProgressChart = ({ history, workoutPlan }) => {
   const totalWorkouts = history.length;
   const streak = calculateStreak(history);

@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import { difficultyIcon, capitalize } from '../../utils/helpers';
 import styles from './Badge.module.css';
 
-// Maps a difficulty/category string to a background color. Kept outside the
-// component so it isn't recreated on every render.
 const COLOR_MAP = {
   beginner: 'var(--color-beginner)',
   intermediate: 'var(--color-intermediate)',
@@ -14,10 +12,6 @@ const COLOR_MAP = {
   balance: 'var(--color-ink)',
 };
 
-/**
- * Badge — small pill label for a difficulty or category value. Demonstrates
- * an inline style computed from props (expression as prop / dynamic style).
- */
 const Badge = ({ value, showIcon = false }) => {
   const background = COLOR_MAP[value] || 'var(--color-text-muted)';
 

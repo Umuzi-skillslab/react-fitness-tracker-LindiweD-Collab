@@ -2,11 +2,6 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './SearchBar.module.css';
 
-/**
- * SearchBar — controlled text input for filtering exercises by name.
- * Demonstrates onChange, onFocus, onBlur and a clear button click handler,
- * plus event-object access via e.target.value.
- */
 const SearchBar = ({ searchTerm, onSearch, onClear = () => {}, placeholder = 'Search exercises...' }) => {
   const [isFocused, setIsFocused] = useState(false);
 

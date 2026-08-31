@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './WorkoutLog.module.css';
 
-/**
- * LogEntry — one row of workout history. Uses a ternary to indicate
- * completed vs. pending status.
- */
 const LogEntry = ({ entry }) => (
   <div className={styles.entry}>
     <div>

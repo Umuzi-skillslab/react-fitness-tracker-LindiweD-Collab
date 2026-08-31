@@ -5,11 +5,7 @@ import { CATEGORIES, DIFFICULTIES, MUSCLE_GROUPS } from '../../data/exercisesDat
 import { capitalize } from '../../utils/helpers';
 import styles from './Exercise.module.css';
 
-/**
- * ExerciseFilter — search box plus category/muscle-group/difficulty
- * dropdowns. Lifts all filter state up to the parent (ExercisesPage) via
- * callback props, and demonstrates several onChange handlers.
- */
+
 const ExerciseFilter = ({
   searchTerm,
   onSearchChange,

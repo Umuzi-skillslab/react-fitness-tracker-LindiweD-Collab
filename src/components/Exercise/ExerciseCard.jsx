@@ -4,11 +4,6 @@ import Badge from '../UI/Badge';
 import { formatDuration } from '../../utils/helpers';
 import styles from './Exercise.module.css';
 
-/**
- * ExerciseCard — summary card for one exercise. Reused inside ExerciseList
- * (grandchild of ExercisesPage), demonstrating 3+ levels of nesting:
- * ExercisesPage > ExerciseList > ExerciseCard.
- */
 const ExerciseCard = ({ exercise, onSelect, isInPlan = false }) => {
   const { name, category, difficulty, duration, caloriesBurn } = exercise;
 

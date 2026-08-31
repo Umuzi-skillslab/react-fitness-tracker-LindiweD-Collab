@@ -2,13 +2,7 @@ import PropTypes from 'prop-types';
 import { isYouTubeUrl, getYouTubeEmbedUrl } from '../../utils/youtube';
 import styles from './Media.module.css';
 
-/**
- * VideoPlayer — embeds an exercise demonstration video. If `videoUrl` is a
- * YouTube link (watch, youtu.be, embed, or Shorts), it renders a YouTube
- * iframe player. Otherwise it falls back to a native HTML5 <video> element
- * (for locally-hosted .mp4 files), with fallback text for unsupported
- * browsers.
- */
+
 const VideoPlayer = ({ videoUrl, title, description = 'Watch the full-form demonstration before you start.' }) => {
   const embedUrl = isYouTubeUrl(videoUrl) ? getYouTubeEmbedUrl(videoUrl) : null;
 

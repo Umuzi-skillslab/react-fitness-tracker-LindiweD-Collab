@@ -3,14 +3,8 @@ import DayCard from './DayCard';
 import { DAYS_OF_WEEK, capitalize } from '../../utils/helpers';
 import styles from './WorkoutPlanner.module.css';
 
-// Compute today's day key once per module load for the "isToday" highlight.
 const TODAY_KEY = DAYS_OF_WEEK[(new Date().getDay() + 6) % 7];
 
-/**
- * WorkoutPlanner — main container for the weekly plan. Renders a DayCard
- * for each day of the week (map, 7 reuses of the same child component) and
- * forwards remove/clear callbacks down to each one.
- */
 const WorkoutPlanner = ({ workoutPlan, onRemoveExercise, onClearDay }) => {
   const totalPlanned = DAYS_OF_WEEK.reduce((sum, day) => sum + workoutPlan[day].length, 0);
 

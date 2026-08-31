@@ -2,10 +2,6 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Modal.module.css';
 
-/**
- * Modal — overlay dialog using the children/composition pattern. Closes on
- * Escape (keyboard event handling) or on clicking the overlay/close button.
- */
 const Modal = ({ children, onClose, title = '' }) => {
   useEffect(() => {
     const handleKeyDown = (e) => {

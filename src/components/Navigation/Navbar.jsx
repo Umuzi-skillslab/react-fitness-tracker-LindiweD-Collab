@@ -10,10 +10,7 @@ const NAV_ITEMS = [
   { to: '/progress', label: 'Progress', match: (path) => path === '/progress' },
 ];
 
-/**
- * Navbar — sticky top navigation with active-route highlighting and a
- * collapsible mobile menu. Uses React Router's <Link> and useLocation.
- */
+
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);

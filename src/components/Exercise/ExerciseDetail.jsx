@@ -5,11 +5,7 @@ import VideoPlayer from '../Media/VideoPlayer';
 import { formatDuration, DAYS_OF_WEEK, capitalize } from '../../utils/helpers';
 import styles from './Exercise.module.css';
 
-/**
- * ExerciseDetail — full exercise view: instructions, demo video, and a day
- * picker to add the exercise into the weekly workout plan. Used both as a
- * modal body (ExercisesPage) and as a standalone route (/exercises/:id).
- */
+
 const ExerciseDetail = ({ exercise, onAddToDay = null }) => {
   const { name, category, difficulty, muscleGroups, duration, sets, reps, caloriesBurn, instructions, videoUrl } =
     exercise;

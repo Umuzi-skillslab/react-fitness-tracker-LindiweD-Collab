@@ -7,11 +7,6 @@ import EmptyState from '../common/EmptyState';
 import { exercisesData } from '../../data/exercisesData';
 import styles from './WorkoutLog.module.css';
 
-/**
- * WorkoutLog — form for logging a completed workout (sets/reps/weight) plus
- * the resulting history list. Demonstrates complex object state, an
- * onSubmit handler, several onChange handlers, and e.preventDefault().
- */
 const WorkoutLog = ({ history, onLogWorkout }) => {
   const [currentLog, setCurrentLog] = useState({
     exerciseId: exercisesData[0].id,

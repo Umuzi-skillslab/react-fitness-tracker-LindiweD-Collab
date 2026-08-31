@@ -3,11 +3,6 @@ import Card from '../UI/Card';
 import { capitalize } from '../../utils/helpers';
 import styles from './WorkoutPlanner.module.css';
 
-/**
- * DayCard — represents a single day of the week in the planner. Rendered
- * seven times by WorkoutPlanner (one per day), demonstrating a component
- * reused many times with different data via props.
- */
 const DayCard = ({ day, exercises, onRemoveExercise, onClearDay, isToday = false }) => (
   <Card className={`${styles.dayCard} ${isToday ? styles.today : ''}`}>
     <div className={styles.dayHeader}>
