@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../components/UI/Button';
 import styles from './pages.module.css';
 
-/** NotFound — 404 page rendered for any unmatched route (path="*"). */
 const NotFound = () => {
   const navigate = useNavigate();
 

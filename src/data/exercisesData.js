@@ -1,5 +1,4 @@
-// Central exercise catalog used across the app. Kept as static data so the
-// app works fully offline; a real deployment would fetch this from an API.
+
 export const exercisesData = [
   {
     id: 1,
@@ -32,7 +31,7 @@ export const exercisesData = [
     reps: 20,
     equipment: 'none',
     caloriesBurn: 60,
-    image: '/assets/images/squats.jpg',
+    image: '/assets/images/squat.webp',
     videoUrl: '/assets/videos/squats-tutorial.mp4',
     instructions: [
       'Stand with feet shoulder-width apart.',
@@ -52,7 +51,7 @@ export const exercisesData = [
     reps: 1,
     equipment: 'none',
     caloriesBurn: 30,
-    image: '/assets/images/plank.jpg',
+    image: '/assets/images/plank.webp',
     videoUrl: '/assets/videos/plank-tutorial.mp4',
     instructions: [
       'Rest on your forearms and toes, body in a straight line.',
@@ -71,7 +70,7 @@ export const exercisesData = [
     reps: 15,
     equipment: 'none',
     caloriesBurn: 40,
-    image: '/assets/images/glute-bridges.jpg',
+    image: '/assets/images/glute-bridges.png',
     videoUrl: '/assets/videos/glute-bridges-tutorial.mp4',
     instructions: [
       'Lie on your back with knees bent, feet flat on the floor.',
@@ -90,7 +89,7 @@ export const exercisesData = [
     reps: 12,
     equipment: 'dumbbells',
     caloriesBurn: 70,
-    image: '/assets/images/dumbbell-rows.jpg',
+    image: '/assets/images/dumbell-rows.jpg',
     videoUrl: '/assets/videos/dumbbell-rows-tutorial.mp4',
     instructions: [
       'Hinge at the hips with a flat back, dumbbell in one hand.',
@@ -109,7 +108,7 @@ export const exercisesData = [
     reps: 10,
     equipment: 'dumbbells',
     caloriesBurn: 65,
-    image: '/assets/images/overhead-press.jpg',
+    image: '/assets/images/overhead-press.webp',
     videoUrl: '/assets/videos/overhead-press-tutorial.mp4',
     instructions: [
       'Stand tall holding dumbbells at shoulder height.',
@@ -485,23 +484,24 @@ export const CATEGORIES = ['strength', 'cardio', 'flexibility', 'balance'];
 export const DIFFICULTIES = ['beginner', 'intermediate', 'advanced'];
 export const MUSCLE_GROUPS = ['Chest', 'Back', 'Shoulders', 'Arms', 'Core', 'Legs'];
 
+
 export const motivationTracks = [
   {
     id: 1,
-    title: 'Rise & Grind',
+    title: 'Full Night Out',
     description: 'An upbeat track to kick off a morning session.',
-    audioUrl: '/assets/audio/rise-and-grind.mp3',
+    audioUrl: '/assets/audio/full-night-out.mp3',
   },
   {
     id: 2,
-    title: 'One More Rep',
+    title: 'Backseat Confetti',
     description: 'Steady, driving energy for the middle of a hard set.',
-    audioUrl: '/assets/audio/one-more-rep.mp3',
+    audioUrl: '/assets/audio/backseat-confetti.mp3',
   },
   {
     id: 3,
-    title: 'Cool Down Flow',
+    title: 'Paper Crown',
     description: 'Calmer tones for stretching and recovery.',
-    audioUrl: '/assets/audio/cool-down-flow.mp3',
+    audioUrl: '/assets/audio/paper-crown.mp3',
   },
 ];

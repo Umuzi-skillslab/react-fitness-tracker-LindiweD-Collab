@@ -8,18 +8,10 @@ import Modal from '../components/UI/Modal';
 import { exercisesData } from '../data/exercisesData';
 import styles from './pages.module.css';
 
-/**
- * ExercisesPage — owns exercise browsing state: search/filter values, the
- * simulated async load, and which exercise is selected for the detail
- * modal. Passes handlers down to ExerciseFilter and ExerciseList (parent to
- * child), and receives selection back up via onSelectExercise (child to
- * parent).
- */
+
 const ExercisesPage = ({ workoutPlan, onAddToDay }) => {
   const navigate = useNavigate();
 
-  // Loaded exercises + loading/error flags — simulates fetching from a
-  // server so the loading state is genuinely demonstrated.
   const [exercises, setExercises] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
@@ -30,7 +22,7 @@ const ExercisesPage = ({ workoutPlan, onAddToDay }) => {
   const [difficulty, setDifficulty] = useState('all');
   const [selectedId, setSelectedId] = useState(null);
 
-  // Simulate an async data load on mount (isLoading already starts true).
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       try {
@@ -44,8 +36,6 @@ const ExercisesPage = ({ workoutPlan, onAddToDay }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Data transformation before passing to child: filter the raw list down
-  // to what should actually be rendered.
   const filteredExercises = useMemo(() => {
     return exercises.filter((ex) => {
       const matchesSearch = ex.name.toLowerCase().includes(searchTerm.toLowerCase());

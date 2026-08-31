@@ -1,7 +1,3 @@
-// Shared, pure helper functions. Kept framework-free so they're easy to
-// unit test in isolation from any component.
-
-/** Format a duration in minutes as a human-readable string. */
 export function formatDuration(minutes) {
   if (minutes < 60) return `${minutes} min`;
   const hours = Math.floor(minutes / 60);
@@ -9,19 +5,17 @@ export function formatDuration(minutes) {
   return rest === 0 ? `${hours} hr` : `${hours} hr ${rest} min`;
 }
 
-/** Return a difficulty-specific emoji indicator. */
+
 export function difficultyIcon(difficulty) {
   if (difficulty === 'beginner') return '🟢';
   if (difficulty === 'intermediate') return '🟡';
   return '🔴';
 }
 
-/** Sum the estimated calories burned across a list of exercises. */
 export function calculateTotalCalories(exercises) {
   return exercises.reduce((total, ex) => total + (ex.caloriesBurn || 0), 0);
 }
 
-/** Sum sets x reps x weight (an approximation of total volume lifted). */
 export function calculateTotalWeight(logEntries) {
   return logEntries.reduce(
     (total, entry) => total + entry.sets * entry.reps * (entry.weight || 0),
@@ -29,7 +23,6 @@ export function calculateTotalWeight(logEntries) {
   );
 }
 
-/** Compute the current consecutive-day workout streak from a history log. */
 export function calculateStreak(history) {
   if (!history || history.length === 0) return 0;
   const days = [...new Set(history.map((h) => h.date))].sort().reverse();
@@ -48,7 +41,6 @@ export function calculateStreak(history) {
   return streak;
 }
 
-/** Capitalize the first letter of a word (e.g. category labels). */
 export function capitalize(word) {
   if (!word) return '';
   return word.charAt(0).toUpperCase() + word.slice(1);

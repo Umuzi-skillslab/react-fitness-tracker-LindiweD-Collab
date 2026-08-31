@@ -4,7 +4,6 @@ import WorkoutPlanner from '../components/WorkoutPlanner/WorkoutPlanner';
 import Button from '../components/UI/Button';
 import styles from './pages.module.css';
 
-/** WorkoutPlannerPage — hosts the weekly WorkoutPlanner, driven by lifted state from App. */
 const WorkoutPlannerPage = ({ workoutPlan, onRemoveExercise, onClearDay }) => (
   <div className="container">
     <div className={styles.pageHeader}>

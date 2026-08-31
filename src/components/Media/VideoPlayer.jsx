@@ -1,21 +1,42 @@
 import PropTypes from 'prop-types';
+import { isYouTubeUrl, getYouTubeEmbedUrl } from '../../utils/youtube';
 import styles from './Media.module.css';
 
 /**
- * VideoPlayer — embeds an exercise demonstration video with native
- * play/pause controls and fallback text for unsupported browsers.
+ * VideoPlayer — embeds an exercise demonstration video. If `videoUrl` is a
+ * YouTube link (watch, youtu.be, embed, or Shorts), it renders a YouTube
+ * iframe player. Otherwise it falls back to a native HTML5 <video> element
+ * (for locally-hosted .mp4 files), with fallback text for unsupported
+ * browsers.
  */
-const VideoPlayer = ({ videoUrl, title, description = 'Watch the full-form demonstration before you start.' }) => (
-  <div className={styles.videoContainer}>
-    <h4 className={styles.mediaTitle}>{title}</h4>
-    <p className={styles.mediaDesc}>{description}</p>
-    <video controls preload="metadata" aria-label={`${title} demonstration video`}>
-      <source src={videoUrl} type="video/mp4" />
-      Your browser does not support the video tag. You can still read the
-      written instructions above.
-    </video>
-  </div>
-);
+const VideoPlayer = ({ videoUrl, title, description = 'Watch the full-form demonstration before you start.' }) => {
+  const embedUrl = isYouTubeUrl(videoUrl) ? getYouTubeEmbedUrl(videoUrl) : null;
+
+  return (
+    <div className={styles.videoContainer}>
+      <h4 className={styles.mediaTitle}>{title}</h4>
+      <p className={styles.mediaDesc}>{description}</p>
+
+      {embedUrl ? (
+        <div className={styles.youtubeWrapper}>
+          <iframe
+            className={styles.youtubeIframe}
+            src={embedUrl}
+            title={`${title} demonstration video`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      ) : (
+        <video controls preload="metadata" aria-label={`${title} demonstration video`}>
+          <source src={videoUrl} type="video/mp4" />
+          Your browser does not support the video tag. You can still read the
+          written instructions above.
+        </video>
+      )}
+    </div>
+  );
+};
 
 VideoPlayer.propTypes = {
   videoUrl: PropTypes.string.isRequired,

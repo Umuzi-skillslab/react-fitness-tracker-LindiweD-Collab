@@ -6,11 +6,6 @@ import Button from '../components/UI/Button';
 import EmptyState from '../components/common/EmptyState';
 import { exercisesData } from '../data/exercisesData';
 
-/**
- * ExerciseDetailPage — standalone route for a single exercise, read from
- * the dynamic :id route parameter. Demonstrates useParams and two uses of
- * programmatic navigation (back, and previous/next exercise).
- */
 const ExerciseDetailPage = ({ onAddToDay = null }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -19,13 +14,10 @@ const ExerciseDetailPage = ({ onAddToDay = null }) => {
   const exercise = exercisesData.find((ex) => ex.id === exerciseId);
   const currentIndex = exercisesData.findIndex((ex) => ex.id === exerciseId);
 
-  // Scroll back to the top whenever the viewed exercise changes, so
-  // "Previous/Next exercise" always lands the reader at the page start.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [exerciseId]);
 
-  // Keep the browser tab title in sync with the exercise being viewed.
   useEffect(() => {
     document.title = exercise ? `${exercise.name} — Pulse` : 'Exercise not found — Pulse';
     return () => {
