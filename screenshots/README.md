@@ -1,1 +1,1 @@
-Add screenshots here: home page, exercises page with filters, exercise detail with video, workout planner, workout history, progress tracking, mobile view, and a test-coverage report screenshot (see README.md's Test coverage report section for the current numbers to capture).
+
